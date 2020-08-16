@@ -1,4 +1,5 @@
 <div class="card">
+  <div class="text-right">Total records: {{ totalRecords }}</div>
   <p-table [value]="servers" #appServersList [lazy]="true" (onLazyLoad)="loadServers($event)" 
       [paginator]="true" [rows]="10" [totalRecords]="totalRecords" [loading]="loading">
       <ng-template pTemplate="header">

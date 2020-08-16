@@ -43,9 +43,9 @@ export class ServersComponent implements OnInit {
     let page = (event.first)/10+1;
     this.paramValues._page = page;
       this.service.getServerList(this.paramValues).subscribe((data) => {
-        this.servers = data.servers;
+        this.servers = data['hydra:member'];
         this.loading = false;
-        this.totalRecords = data.total;
+        this.totalRecords = data["hydra:totalItems"];
       });
     }
 }

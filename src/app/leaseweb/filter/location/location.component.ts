@@ -6,7 +6,7 @@ import { Component, OnInit, Input, OnChanges, Output, EventEmitter } from '@angu
   templateUrl: './location.component.html',
   styleUrls: ['./location.component.css']
 })
-export class LocationComponent implements OnInit {
+export class LocationComponent implements OnInit, OnChanges {
   
   @Output() filtered = new EventEmitter();
   @Input () locationData: any[];
@@ -21,6 +21,5 @@ export class LocationComponent implements OnInit {
   }
 
   ngOnChanges(): void {
-    console.log(this.locationData);
   }
 }
