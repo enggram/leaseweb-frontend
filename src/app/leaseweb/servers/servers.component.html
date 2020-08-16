@@ -1,0 +1,31 @@
+<div class="card">
+  <p-table [value]="servers" #appServersList [lazy]="true" (onLazyLoad)="loadServers($event)" 
+      [paginator]="true" [rows]="10" [totalRecords]="totalRecords" [loading]="loading">
+      <ng-template pTemplate="header">
+          <tr>
+              <th scope="col">#</th>
+              <th scope="col">Model</th>
+              <th scope="col">RAM</th>
+              <th scope="col">HDD</th>
+              <th scope="col">Location</th>
+              <th scope="col">Price</th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-server let-i="rowIndex">
+          <tr>
+              <th scope="row">{{ i+1 }}</th>
+              <td>{{ server.model }}</td>
+              <td>{{ server.ram }}GB</td>
+              <td>{{ server.hdd }}</td>
+              <td>{{ server.location }}</td>
+              <td>{{ server.currency }}{{ server.price }}</td>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="paginatorleft">
+          <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
+      </ng-template>
+      <ng-template pTemplate="paginatorright">
+          <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
+      </ng-template>
+  </p-table>
+</div>

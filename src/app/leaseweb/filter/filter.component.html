@@ -1,0 +1,9 @@
+<div class="card filter-sidebar ">
+    <div class="card-header d-flex justify-content-between mb-0">
+      <div>Filters</div>
+    </div>
+    <app-disk (filtered)="getFilterData($event)"></app-disk>
+    <app-ram [ramData]="filterData.ram" (filtered)="getFilterData($event)"></app-ram>
+    <app-disktype [diskTypeData]="filterData.hddType" (filtered)="getFilterData($event)"></app-disktype>
+    <app-location [locationData]="filterData.location" (filtered)="getFilterData($event)"></app-location>
+  </div>

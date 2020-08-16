@@ -24,7 +24,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/primeng/resources/themes/saga-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeicons/primeicons.css",
             ],
             "scripts": []
           },
@@ -119,6 +122,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "leaseweb-frontend"
+    }
+  },
+  "defaultProject": "leaseweb-frontend",
+  "cli": {
+    "analytics": "97b24d37-ecd8-445f-af18-685038c27190"
+  }
 }
